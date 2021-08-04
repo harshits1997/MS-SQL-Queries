@@ -1,0 +1,11 @@
+--Suppose we have table name as Table_1 with column name as Column_1, column_2
+
+Column_1      Column_2     Column_3
+----------- ---------- --------------
+1           Johny       Johny-email
+3           fredy       Johny-email
+
+
+Select Column_1 , Column_2 , Count(*) as Count
+From Table_1 Group By Column_1 , Column_2
+Having Count(*)>1
