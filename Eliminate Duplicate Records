@@ -1,0 +1,6 @@
+WITH CTE_NAME AS
+(
+    Select *, Row_Number() over
+      (  Partition By Column_1 Order By Column_1 DESC ) as Rn
+      From Table_1 with (no lock)    
+)
