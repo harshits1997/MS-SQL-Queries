@@ -1,1 +1,4 @@
+--Copy Data From One table to Another Table With Structure
 
+SELECT * INTO [DB_NAME_1].[Schema_Name_1].[Table_Name]
+FROM [DB_NAME_1].[Schema_Name_1].[Table_Name_2]
