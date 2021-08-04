@@ -1,6 +1,19 @@
+--Suppose we have table name as Table_1 with column name as Column_1, column_2
+
+Column_1      Column_2     Column_3
+----------- ---------- --------------
+1           Johny       Johny-email
+3           fredy       Johny-email
+
 WITH CTE_NAME AS
 (
     Select *, Row_Number() over
       (  Partition By Column_1 Order By Column_1 DESC ) as Rn
       From Table_1 with (no lock)    
 )
+
+-- To view the selected records
+Select * From CTE_NAME where rn=2
+
+--You can use DELETE Command Also
+Delete From CTE_NAME where rn=2
