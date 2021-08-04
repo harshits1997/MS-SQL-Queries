@@ -1,0 +1,4 @@
+--Copy Data From One table to Another Table Without Structure
+
+INSERT INTO [DB_NAME_1].[Schema_Name_1].[Table_Name_1]
+SELECT * FROM [DB_NAME_2].[Schema_Name_2].[Table_Name_2]
