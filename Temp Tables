@@ -2,14 +2,14 @@
 
 --Global Temporary can be definded is ##temp_table1
 
---Method 1 	:100:
+--Method 1 
 
 Select * INTO #Temp_Table
 From Table_name
 
 
 
---Method 2 	:100:
+--Method 2 
 --Create Temp table 
 
 
