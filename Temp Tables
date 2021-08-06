@@ -1,0 +1,27 @@
+--Local Table is Defined as #temp_table1
+
+--Global Temporary can be definded is ##temp_table1
+
+--Method 1 	:100:
+
+Select * INTO #Temp_Table
+From Table_name
+
+
+
+--Method 2 	:100:
+--Create Temp table 
+
+
+CREATE TABLE #Students
+(
+	name VARCHAR(50),
+	age int,
+	gender VARCHAR (50)
+
+)
+
+INSERT INTO #tudents
+SELECT name, age, gender
+FROM student
+WHERE gender = 'Male'
