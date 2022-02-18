@@ -5,3 +5,12 @@ SELECT 'Alter Table' + TABLE_SCHEMA + '.'+TABLE_NAME + 'Alter Column' + '['+colu
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE COLUMN_NAME='ROUTE' and
 TABLE_NAME in ('table_name1' , 'table_name2')
+
+
+
+
+SELECT 'Alter Table ' + TABLE_SCHEMA + '.'+TABLE_NAME + ' ADD ' + '[ID] nvarchar(50) NULL' as  code
+FROM INFORMATION_SCHEMA.Tables
+WHERE
+TABLE_SCHEMA in ('schema1','schema2')
+and TABLE_NAME in ('table1' , 'table3','table2')
