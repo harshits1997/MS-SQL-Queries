@@ -1,7 +1,7 @@
 
 --Alter Statment for column in multiple tables in data base
 
-SELECT 'Alter Table' + TABLE_SCHEMA + '['+TABLE_NAME+']' + 'Alter Column' + '['+column_name+']' +'varchar(12)'
+SELECT 'Alter Table' + TABLE_SCHEMA + '.'+TABLE_NAME + 'Alter Column' + '['+column_name+']' +'varchar(12)'
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE COLUMN_NAME='ROUTE' and
 TABLE_NAME in ('table_name1' , 'table_name2')
