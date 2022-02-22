@@ -1,1 +1,7 @@
 
+#not pvoit 
+
+ SELECT Distinct  [FILENAME]
+      ,[ETLDate] from [DTE_Staging].[Daily] where [FILENAME]=
+'C20220209.csv'
+ and CONVERT(Date,[ETLDate])= CONVERT(Date,'2022-02-18 14:17:13.000')
