@@ -1,0 +1,4 @@
+with base as(
+Select  PARTNER_ID , [READY_DATE],ISdate([READY_DATE]) as ships FROM [HPSurveyDTE_Staging].[Stg_GN] 
+)
+select  PARTNER_ID , [READY_DATE],ISNULL([READY_DATE], '0') from base where ships!=1
